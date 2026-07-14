@@ -15,31 +15,31 @@ addButton.addEventListener("click", function(){
         return;
     }
 
-
     // Create list item
-    let li = document.createElement("li");
+            let li = document.createElement("li");
 
+            // Create checkbox
+            let checkbox = document.createElement("input");
 
-    // Create checkbox
-    let checkbox = document.createElement("input");
+            // changes the input element into a clickable checkbox instead of a normal text input.
+            checkbox.type = "checkbox";
 
-    checkbox.type = "checkbox";
+            // Add text
+            li.appendChild(checkbox);
 
-    // Add text
-    li.appendChild(checkbox);
+            li.appendChild(document.createTextNode(task));
 
-    li.appendChild(document.createTextNode(task));
+            // Add task to list
+            listContainer.appendChild(li);
 
-    // Add task to list
-    listContainer.appendChild(li);
+            checkbox.addEventListener("click", function()
+            {
+                
+            // adds the "checked" CSS class to the list item if it doesn't have it, and removes it if it already has it.    
+            li.classList.toggle("checked");
 
-    checkbox.addEventListener("click", function(){
+        }); 
+            // Clear input
+            inputBox.value = "";
 
-    li.classList.toggle("checked");
-
-}); 
-    // Clear input
-    inputBox.value = "";
-
-});
-
+        }); 
