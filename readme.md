@@ -1,56 +1,69 @@
-In this File, understand the problem, break it into smaller actions, decide the data flow, then convert each action into code.
+# ✅ To-Do List App
 
-Step 1: Think about the user's action
+## 📌 About the Project
 
-Ask: What does the user do?
-user:
-    1.Types a task
-    2.Clicks Add button
-    3.Task appears in the list
-    4.User can mark it complete
-    5. show it on screen
+This is a simple and interactive To-Do List web application built using HTML, CSS, and JavaScript. It allows users to add tasks to a list and mark tasks as completed by clicking a checkbox.
 
- Step 2: Identify the things you need
-  developer ask: what element do i need to control?
-  input: Where does data come from
-  button: What starts the action?
-  List container: Where should the result go?
+This project helped me understand how JavaScript interacts with HTML elements and how to create dynamic web page content.
 
- Step 3: Decide the workflow before coding
-   A developer writes a mental algorithm:
-     WHEN button is clicked:
+## ✨ Features
 
-    Get input value
+- Add new tasks to the to-do list.
+- Display tasks dynamically without reloading the page.
+- Prevent empty tasks from being added.
+- Mark tasks as completed using checkboxes.
+- Apply a strikethrough style to completed tasks using CSS.
+- Automatically clear the input field after adding a task.
+- Simple and user-friendly interface.
 
-    IF input is empty:
-        show error
+## 🛠️ Technologies Used
 
-    ELSE:
-        create new list item
-        put task text inside it
-        add it to the list
-        clear input
+- **HTML5** — Creates the structure of the application.
+- **CSS3** — Styles the interface and completed tasks.
+- **JavaScript** — Handles task creation, checkbox events, and DOM manipulation.
 
- Step 4: Convert each thought into code 
-    Run code when button is clicked -
-    addButton.addEventListener("click", function(){
-        });   
+## 🚀 How to Run the Project
 
-    Get the user's task -
-    let task = inputBox.value;
+1. Download or clone the project repository.
+2. Open the project folder.
+3. Locate the `index.html` file.
+4. Open `index.html` in your web browser.
+5. Enter a task in the input field and click the Add button.
 
-    What if the user gives nothing? - 
-    if(task === ""){
-    alert("Please write a task");
-    return; 
-    }
+No additional installation is required.
 
-    I need a new HTML element -
-    let li = document.createElement("li");
+## 🎯 How to Use
 
-    I need to put text inside my new element -
-    li.appendChild(document.createTextNode(task));
+1. Type a task into the input box.
+2. Click the **Add** button to add it to the list.
+3. If the input is empty, an alert asks you to enter a task.
+4. Click the checkbox next to a task to mark it as completed.
+5. Click the checkbox again to remove the completed styling.
 
-    Show it on the page -
-    listContainer.appendChild(li);
-             
+## 🧠 Concepts Learned
+
+- Selecting HTML elements using `getElementById()`.
+- Handling click events with `addEventListener()`.
+- Reading and clearing input values.
+- Validating user input using conditional statements.
+- Creating HTML elements dynamically with `createElement()`.
+- Adding elements using `appendChild()`.
+- Creating text nodes using `createTextNode()`.
+- Using `classList.toggle()` to change CSS classes.
+- Connecting HTML, CSS, and JavaScript.
+
+## 🔮 Future Improvements
+
+- Add a delete button to remove individual tasks.
+- Save tasks in `localStorage` so they remain after refreshing the page.
+- Add separate filters for all, pending, and completed tasks.
+- Add a feature to edit existing tasks.
+- Improve the layout for mobile devices.
+
+## 👨‍💻 Author
+
+Developed as a beginner front-end project to practice HTML, CSS, JavaScript, and DOM manipulation.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
