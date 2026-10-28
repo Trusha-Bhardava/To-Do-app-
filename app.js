@@ -18,20 +18,22 @@ addButton.addEventListener("click", function(){
     // Create list item
             let li = document.createElement("li");
 
-            // Create checkbox
+            // Create checkbox input element
             let checkbox = document.createElement("input");
 
             // changes the input element into a clickable checkbox instead of a normal text input.
             checkbox.type = "checkbox";
 
-            // Add text
+            // Add task into list item
             li.appendChild(checkbox);
 
+            // add text task add near checkbox
             li.appendChild(document.createTextNode(task));
 
             // Add task to list
             listContainer.appendChild(li);
 
+            // Toggle cross-out style when checkbox is clicked
             checkbox.addEventListener("click", function()
             {
                 
@@ -39,7 +41,7 @@ addButton.addEventListener("click", function(){
             li.classList.toggle("checked");
 
         }); 
-            // Clear input
+            // Clear the input box for the next task
             inputBox.value = "";
 
         }); 
